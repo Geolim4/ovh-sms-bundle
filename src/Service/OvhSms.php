@@ -37,7 +37,7 @@ class OvhSms {
 
 
 
-    public function __construct($sender, $applicationKey, $applicationSecret, $consumerKey, $smsService, $endpoint='ovh-eu' ){
+    public function __construct($sender, $applicationKey, $applicationSecret, $consumerKey, $smsService, $endpoint ){
         $this->sender = $sender;
         $this->applicationKey = $applicationKey;
         $this->applicationSecret = $applicationSecret;
@@ -61,13 +61,28 @@ class OvhSms {
 
         $connexion = $this->getConnexion();
         $content = (object) $this->sms;
-        $resultPostJob = $connexion->post('/sms/'. $this->smsService. '/jobs/', $content);
 
+        if(empty($this->smsService)){
+            $smsService = $this->getDefaultSmsService();
+        }
+        else{
+            $smsService = $this->smsService;
+        }
 
-
-        $smsJobs = $connexion->get('/sms/'. $this->smsService . '/jobs/');
+        $resultPostJob = $connexion->post('/sms/'. $smsService . '/jobs/', $content);
 
         return $resultPostJob;
+    }
+
+
+    public function getDefaultSmsService(){
+        $connexion = $this->getConnexion();
+        $smsServices = $connexion->get('/sms/');
+        $defaultService = null;
+        if(is_array($smsServices) && !empty($smsServices)){
+            $defaultService = reset($smsServices);
+        }
+        return $defaultService;
     }
 
     /**
