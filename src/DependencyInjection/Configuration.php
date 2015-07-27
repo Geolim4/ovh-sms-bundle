@@ -21,19 +21,19 @@ class Configuration implements ConfigurationInterface
         // configure your bundle. See the documentation linked above for
         // more information on that topic.
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('ovh_sms');
+        $rootNode = $treeBuilder->root('a2zi_ovh_sms');
         $rootNode
 
             ->children()
-            ->info('ce que my_type configure')
-            ->example('exemple de paramètre')
-
-            ->scalarNode('application_key')->isRequired()->cannotBeEmpty()->end()
-            ->scalarNode('application_secret')->isRequired()->cannotBeEmpty()->end()
-            ->scalarNode('consumer_key')->isRequired()->cannotBeEmpty()->end()
+//            ->info('ce que my_type configure')
+//            ->example('exemple de paramètre')
+            ->scalarNode('sender')->defaultNull()->end()
+            ->scalarNode('application_key')->defaultNull()->end()
+            ->scalarNode('application_secret')->defaultNull()->end()
+            ->scalarNode('consumer_key')->defaultNull()->end()
             ->scalarNode('endpoint')->defaultValue('ovh-eu')->end()
             ->scalarNode('sms_service_id')->defaultNull()->end()
-            ->scalarNode('sender')->defaultNull()->end();
+            ;
 
         return $treeBuilder;
     }
