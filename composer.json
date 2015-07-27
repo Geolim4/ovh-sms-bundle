@@ -1,0 +1,26 @@
+{
+  "name": "a2zi/ovh-sms-bundle",
+  "license": "MIT",
+  "type": "symfony-bundle",
+  "description": "A2Zi Ovh SMS Api Bundle",
+  "autoload": {
+    "psr-4": {
+      "A2zi\\OvhSmsBundle\\": "src/"
+    }
+  },
+
+  "require": {
+    "php": ">=5.3.3",
+    "symfony/symfony": "~2.6.0",
+    "ovh/ovh": "dev-master"
+
+  },
+  "require-dev": {
+    "behat/behat": "~3.0",
+    "behat/symfony2-extension": "~2.0",
+    "behat/mink": "~1.6",
+    "behat/mink-extension": "~2.0",
+    "behat/mink-browserkit-driver": "~1.2",
+    "phpunit/phpunit": "4.5.*"
+  }
+}

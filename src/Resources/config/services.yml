@@ -1,0 +1,4 @@
+services:
+  ovh.sms:
+    class: A2zi\DirectoryBundle\Service\OvhSms
+    arguments: [ %ovh_sms.sender%, %ovh_sms.application_key%, %ovh_sms.application_secret%, %ovh_sms.consumer_key%, %ovh_sms.sms_service_id%, %ovh_sms.endpoint%]
