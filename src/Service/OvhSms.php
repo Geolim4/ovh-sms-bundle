@@ -91,14 +91,17 @@ class OvhSms {
      */
     public function initializeMessage(){
 
+        if(!empty($this->sender)){
+            $this->setSmsParam('sender',$this->sender);
+        }
+
         $this
             ->setSmsParam('charset','UTF-8')
-            ->setSmsParam('sender',$this->sender)
             ->setClass('phoneDisplay')
             ->set7BitCoding()
             ->setNoStopClause(true)
             ->setPriority('high')
-            ->setSenderForResponse(true)
+            ->setSenderForResponse(false)
             ->setValidityPeriod(2880);
 
         return $this;
