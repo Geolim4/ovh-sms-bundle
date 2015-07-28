@@ -2,7 +2,15 @@
   "name": "a2zi/ovh-sms-bundle",
   "license": "MIT",
   "type": "symfony-bundle",
-  "description": "A2Zi Ovh SMS Api Bundle",
+  "description": "Symfony Bundle to easily send SMS using Ovh API",
+  "authors": [
+    {
+      "name": "Cyril CRETTE",
+      "email": "cyril.crette@a2zi.fr",
+      "homepage": "http://www.a2zi.fr",
+      "role": "Developer"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "A2zi\\OvhSmsBundle\\": "src/"
