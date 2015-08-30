@@ -26,7 +26,7 @@
   "require": {
     "php": ">=5.3.3",
     "symfony/symfony": "~2.7",
-    "ovh/php-ovh": "dev-master"
+    "ovh/ovh": "dev-master"
 
   },
   "require-dev": {
