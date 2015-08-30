@@ -1,9 +1,9 @@
 <?php
 
-namespace A2zi\OvhSmsBundle;
+namespace Geolim4\OvhSmsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class A2ziOvhSmsBundle extends Bundle
+class Geolim4OvhSmsBundle extends Bundle
 {
 }

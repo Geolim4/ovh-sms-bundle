@@ -1,4 +1,4 @@
 services:
   ovh_sms:
-    class: A2zi\OvhSmsBundle\Service\OvhSms
-    arguments: [ %a2zi_ovh_sms.sender%, %a2zi_ovh_sms.application_key%, %a2zi_ovh_sms.application_secret%, %a2zi_ovh_sms.consumer_key%, %a2zi_ovh_sms.sms_service_id%, %a2zi_ovh_sms.endpoint%]
+    class: Geolim4\OvhSmsBundle\Service\OvhSms
+    arguments: [ %geolim4_ovh_sms.sender%, %geolim4_ovh_sms.application_key%, %geolim4_ovh_sms.application_secret%, %geolim4_ovh_sms.consumer_key%, %geolim4_ovh_sms.sms_service_id%, %geolim4_ovh_sms.endpoint%]

@@ -6,7 +6,7 @@
  * Time: 17:07
  */
 
-namespace A2zi\OvhSmsBundle\Service;
+namespace Geolim4\OvhSmsBundle\Service;
 
 
 use Ovh\Api;

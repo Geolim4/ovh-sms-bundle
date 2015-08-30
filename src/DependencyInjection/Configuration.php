@@ -1,6 +1,6 @@
 <?php
 
-namespace A2zi\OvhSmsBundle\DependencyInjection;
+namespace Geolim4\OvhSmsBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -21,7 +21,7 @@ class Configuration implements ConfigurationInterface
         // configure your bundle. See the documentation linked above for
         // more information on that topic.
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('a2zi_ovh_sms');
+        $rootNode = $treeBuilder->root('geolim4_ovh_sms');
         $rootNode
 
             ->children()
