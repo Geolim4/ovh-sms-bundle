@@ -19,7 +19,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "A2zi\\OvhSmsBundle\\": "src/"
+      "Geolim4\\OvhSmsBundle\\": "src/"
     }
   },
 
