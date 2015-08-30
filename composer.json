@@ -1,9 +1,15 @@
 {
-  "name": "a2zi/ovh-sms-bundle",
+  "name": "geolim4/ovh-sms-bundle",
   "license": "MIT",
   "type": "symfony-bundle",
   "description": "Symfony Bundle to easily send SMS using Ovh API",
   "authors": [
+    {
+      "name": "Geolim4",
+      "email": "contact@geolim4.com",
+      "homepage": "http://www.geolim4.com",
+      "role": "Developer"
+    },
     {
       "name": "Cyril CRETTE",
       "email": "cyril.crette@a2zi.fr",
