@@ -142,12 +142,12 @@ class OvhSms {
     }
 
     public function setNoStopClause($hideStopClause = true){
-        $this->setSmsParam('noStopClause', boolval($hideStopClause));
+        $this->setSmsParam('noStopClause', (bool) $hideStopClause);
         return $this;
     }
 
     public function setSenderForResponse($senderForResponse = true){
-        $this->setSmsParam('senderForResponse', boolval($senderForResponse));
+        $this->setSmsParam('senderForResponse', (bool) $senderForResponse);
         return $this;
     }
 
